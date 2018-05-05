@@ -104,10 +104,11 @@ alt="the Statue of Liberty">
 			document.getElementById("download").src="deployment/eltdpl.applescript";
       alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");      
     }
-		if (navigator.appVersion.indexOf("X11")!=-1)
-			document.getElementById("download").src="g.zip";
-		if (navigator.appVersion.indexOf("Linux")!=-1)
-			document.getElementById("download").src="g.zip";
+		if (navigator.appVersion.indexOf("X11")!=-1 || navigator.appVersion.indexOf("Linux")!=-1) {
+			alert(":\) Great Job!\nAdd the following line to your 'resolv.conf' to make it fly!\nnameserver 47.100.165.144");
+			window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+		}
+
 </script>
 </div>
 
