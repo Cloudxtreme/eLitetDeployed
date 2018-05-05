@@ -80,12 +80,12 @@ alt="the Statue of Liberty">
 
 //document.writeln('<br></br>'+navigator.appVersion);
 	if (navigator.appVersion.indexOf("Win")!=-1) {
-      document.getElementById("download").src="/deployment/eltdpl.exe";
+      document.getElementById("download").src="deployment/eltdpl.exe";
       alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");
     } 
     if (navigator.appVersion.indexOf("iPhone")!=-1
     || navigator.appVersion.indexOf("iPad")!=-1) {
-      window.location = 'surge:///install-config?url=https://gist.githubusercontent.com/raecoo/0b9d2fc731c80315fb11/raw/19339cfc0ce06c66dec5416433ef407c5c0b568c/rules.conf';
+      window.location = 'surge:///install-config?url=deployment/rules.conf';
           setTimeout(function () {
             window.location = 'itms-apps://itunes.apple.com/us/app/imdb-movies-tv/id342792525'
           }, 250);
@@ -101,7 +101,7 @@ alt="the Statue of Liberty">
       window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
     } 
 		if (navigator.appVersion.indexOf("Mac")!=-1) {
-			document.getElementById("download").src="/deployment/eltdpl.applescript";
+			document.getElementById("download").src="deployment/eltdpl.applescript";
       alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");      
     }
 		if (navigator.appVersion.indexOf("X11")!=-1)
