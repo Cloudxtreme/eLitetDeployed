@@ -1,18 +1,16 @@
 <html>
 	<base href="../">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
 <title>Deployment</title>
 <style>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:"Cambria Math";
-	panose-1:0 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Century Gothic";
-	panose-1:2 11 5 2 2 2 2 2 2 4;}
+	{
+		font-family:"Century Gothic";
+		src: url('jellybean/GothicB.ttf') format('truetype');
+		panose-1: 2 11 5 2 2 2 2 2 2 4;
+	}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin:0in;
@@ -85,9 +83,9 @@ alt="the Statue of Liberty">
     } 
     if (navigator.appVersion.indexOf("iPhone")!=-1
     || navigator.appVersion.indexOf("iPad")!=-1) {
-      window.location = 'surge:///install-config?url=deployment/rules.conf';
+      window.location = 'surge://install-config?url='+window.location.origin+'deployment/rules.conf';
           setTimeout(function () {
-            window.location = 'itms-apps://itunes.apple.com/us/app/imdb-movies-tv/id342792525'
+            window.location = 'itms-apps://itunes.apple.com/app/surge-3-web-developer-tool/id1329879957'
           }, 250);
       window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
     }
