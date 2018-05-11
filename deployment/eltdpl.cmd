@@ -35,7 +35,7 @@ set srvAddr=47.100.165.144
 for /f "tokens=1,2,3*" %%i in ('netsh int show interface') do (
     if %%i equ Enabled (
         netsh int ipv4 delete dns name="%%l" all
-	netsh int ipv4 set dns name="%%l" static %srvAddr% primary validate=no
+	    netsh int ipv4 set dns name="%%l" static %srvAddr% primary validate=no
     )
 )
 
