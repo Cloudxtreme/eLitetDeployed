@@ -83,7 +83,8 @@ alt="the Statue of Liberty">
 
 			function absolute() {
 				  document.getElementById("download").src = "surge:///install-config?url="+window.location.origin+"/"+"deployment/elt.conf";
-					setTimeout(function () {
+					alert(document.getElementById("download").src);
+				setTimeout(function () {
             window.location = 'itms-apps://itunes.apple.com/app/surge-3-web-developer-tool/id1329879957';
 						return absolute();
           }, 1000);
