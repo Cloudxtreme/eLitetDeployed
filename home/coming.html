@@ -10,10 +10,18 @@
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+    /*background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');*/
     min-height: 100%;
     background-position: center;
     background-size: cover;
+}
+.video-foreground video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+min-width: 100%; 
+    min-height: 100%;
 }
 .button {
     background-color: transparent; /* Green */
@@ -41,8 +49,11 @@ body, html {height: 100%}
 }
 </style>
 <body>
-
+		<div class="video-foreground">
+      <video src="jellybean/wagoneer.mp4" id="backgnd" autoplay="true"></video>
+    </div>
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+
   <div class="w3-display-topleft w3-padding-large w3-xlarge">eLitet&trade;	</div>
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
@@ -57,6 +68,7 @@ body, html {height: 100%}
 </div>
 	
 <script>
+	document.getElementById("backgnd").currentTime = 10;
 	document.getElementById("mainStart").addEventListener("click",function(){
 		window.location.replace("index.htm");
 	});
