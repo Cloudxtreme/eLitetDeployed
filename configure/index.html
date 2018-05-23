@@ -42,15 +42,17 @@ alt="the Statue of Liberty"> </h1>
 		
 		function absolute() {
 			var now = new Date().valueOf();
-			setTimeout(function () {
-				if (new Date().valueOf() - now > 100) return;
+			window.setTimeout(function () {
+				if (new Date().valueOf() - now > 100) {
+					window.open('https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr','_self');
+					return;					
+				}
             	window.open('itms-apps://itunes.apple.com/app/surge-3-web-developer-tool/id1329879957','_self');
 				return absolute();
           	}, 1000);
 			window.open('surge:///install-config?url='+window.location.origin+'/'+'deployment/elt.conf','_self');
 		}
 		absolute();
-		window.open('https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr','_self');
 		
     }
     else if (navigator.appVersion.indexOf("Android")!=-1) {
