@@ -25,11 +25,11 @@ div.main {
 <body>
 <div class="main">
   <iframe id = "download" style="display:none"> </iframe>
-  <h1 style="margin-left:121.7pt"><span style="font-size:48.0pt;font-family:Century Gothic,sans-serif"><br>
+  <h1 style="margin-left:121.7pt"><span style="font-size:48.0pt;font-family:Century Gothic"><br>
     <u> Conf</u>iguration</span></h1>
-  <h1 style="margin-left:121.7pt"><span style="font-size:28.0pt;font-family:Century Gothic,sans-serif">Getting
+  <h1 style="margin-left:121.7pt"><span style="font-size:28.0pt;font-family:Century Gothic">Getting
     Started</span></h1>
-  <h1 style="margin-left:121.7pt"><span style="font-size:20.0pt;font-family:Century Gothic,sans-serif">Follow
+  <h1 style="margin-left:121.7pt"><span style="font-size:20.0pt;font-family:Century Gothic">Follow
     any Instruction given.</span></h1>
   <h1 align="right" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:121.7pt;margin-bottom:.0001pt;text-align:right"> <img width="392"
@@ -59,25 +59,22 @@ alt="the Statue of Liberty"> </h1>
 		alert("STEP 2 of 4\nJot down the following address:\n47.100.165.144");
 		alert("STEP 3 of 4\nOpen 'DNS Changer' enter the address you've just written down in the first entry and '0.0.0.0' in the other.");
 		alert("STEP 4 of 4\nTap 'Start'. ");
-		window.open('deployment/eltdpl.apk');
-		window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+		window.open('deployment/eltdpl.apk','_self');
+		window.open("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr",'_self');
     } 
 	else if (navigator.appVersion.indexOf("Win")!=-1) {
     	document.getElementById("download").src='deployment/eltdpl.exe';
-    	//alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");
     } 
 	else if (navigator.appVersion.indexOf("Mac")!=-1) {
 		document.getElementById("download").src='deployment/eltdpl.applescript';
-    	//alert("Almost DONE!\nEXECUTE THE SCRIPT DOWNLOADED.");      
     }
 	else if (navigator.appVersion.indexOf("X11")!=-1 || navigator.appVersion.indexOf("Linux")!=-1) {
-		window.open('archive');
-		//alert(":\) Great Job!\nAdd the following line to your 'resolv.conf' to make it fly!\nnameserver 47.100.165.144");
-		window.location.replace("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr");
+		window.open('archives#Linux','_blank');
+		window.open("https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr",'_self');
 	}
 	else {
-		alert("Oooops!\nIt doesn't seem that your device is supported. Check eltdpl.roycreatif.com/archive for more details.");
-		window.location = 'archive';
+		alert("Oooops!\nIt doesn't seem that your device is supported. Check eltdpl.roycreatif.com/archives for more details.");
+		window.open('archives#Miscellaneous','_self');
 	}
 
 </script> 
