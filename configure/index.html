@@ -32,14 +32,14 @@ div.main {
 margin-left:121.7pt;margin-bottom:.0001pt;text-align:right"> <img width="392"
 height="383" id="estateBranding" src="jellybean/branding.jpg"
 alt="Statue of Liberty"> </h1>
-  <script>
+  <script defer>
 
 	/**
 	* Multilingual Support
 	* español | English
 	**/
-	if (navigator.language.indexOf("es")==-1)
-		window.open("configure/es", "_self");
+	if (navigator.language.indexOf("es")!=-1)
+		window.location.replace("configure/es", "_self");
 	  
     if (navigator.appVersion.indexOf("iPhone")!=-1
     || navigator.appVersion.indexOf("iPad")!=-1) {
