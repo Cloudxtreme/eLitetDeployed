@@ -93,9 +93,20 @@ body, html {height: 100%}
 </div>
 	
 <script>
-	document.getElementById("mainStart").addEventListener("click",function(){
-		window.location.replace("");
-	});
+	
+	function evtHandler(id, locat) {
+		document.getElementById(id).addEventListener("click",function(){
+			window.location.replace(locat);
+		});
+	}
+
+	evtHandler("mainStart", "");
+	
+	evtHandler("about", "archives");
+	evtHandler("contribute", "https://fund.elitet.net");
+	evtHandler("inspire", "https://entre.elitet.net");
+	evtHandler("commu", "https://community.elitet.net");
+	
 </script>
 	
 </body>

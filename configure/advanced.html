@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	
+<style>
+	body {
+    	margin: 0;
+	}
+</style>
+<head>
+<meta charset="utf-8">
+<title>Advanced</title>
+</head>
+
+	
+<body>
+<iframe src="http://192.168.1.200" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%" id="lucid"></iframe>
+</body>
+	
+<script>
+	var source = document.getElementById("lucid");
+	source.onload = function(){
+		alert(source.contentDocument.body.textContent);
+		
+		if (source.contentDocument.body.innerHTML.search("a") != -1)
+			alert("found");
+		else
+			alert("a");		
+	}
+
+</script>
+	
+</html>
