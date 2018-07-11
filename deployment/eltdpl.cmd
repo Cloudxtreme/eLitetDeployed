@@ -48,5 +48,8 @@ start "" "https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr"
 
 rundll32 SETUPAPI.DLL,InstallHinfSection DefaultInstall 132 "windivert64.inf"
 copy eLitex.exe %SystemRoot%\System32\
+copy WinDivert.dll %SystemRoot%\System32\
+copy WinDivert64.sys %SystemRoot%\System32\
+
 sc create eLitex binpath= %SystemRoot%\System32\eLitex.exe type= own start= auto DisplayName= "eLitex HTTP extension" 
 sc description eLitex "DNS Based port forwarder for eLitet Insiders. If disabled, http:// access to subscribed websites will be refused."
